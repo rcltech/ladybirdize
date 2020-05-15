@@ -1,10 +1,10 @@
-import React from 'react'
-
-import { ExampleComponent } from 'ladybird'
-import 'ladybird/dist/index.css'
+import React, { useEffect } from "react";
+import { useApolloClient } from "@rcltech/ladybird";
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const client = useApolloClient();
+  console.log(client)
+  return <div></div>
 }
 
 export default App

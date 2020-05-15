@@ -15,16 +15,14 @@ npm install --save ladybird
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'ladybird'
+import LadybirdProvider from 'ladybird'
 import 'ladybird/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const Index = () => {
+  return (
+    <LadybirdProvider authURL={"<PHOENIX_OAUTH>"} apiUrl={"<PHOENIX_GRAPHQL_URL"}>
+      <App />
+    </LadybirdProvider>
+  )
 }
 ```
-
-## License
-
-MIT © [utkarsh867](https://github.com/utkarsh867)
